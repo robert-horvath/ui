@@ -1,0 +1,44 @@
+class: RHo\UI\StrFixed
+valid: # VALID DATA
+- out: abc
+  in: abc
+  array:
+  - xyz
+  - abc
+- out: x
+  in: x
+  array:
+  - a
+  - b
+  - x
+  - y
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+  array:
+  - 'true'
+  - 'false'
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+  array: []
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: 100
+  array: []
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in:
+  - a
+  - b
+  array: NULL
+- err:
+    code: RHo\UI\Exception::ARRAY_ITEM_NOT_FOUND
+    txt: Array item not found
+  in: a
+  array: NULL

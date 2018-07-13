@@ -1,0 +1,30 @@
+{
+	"name": "robert/ui",
+	"license": "MIT",
+	"require": {
+		"php": ">=7.2"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^7"
+	},
+	"autoload": {
+		"psr-4": {
+			"RHo\\UI\\": [
+				"src/",
+				"src/scalar/",
+				"src/compound/",
+				"src/custom/"
+			]
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"RHoTest\\UI\\": [
+				"tests/",
+				"tests/scalar/",
+				"tests/compound/",
+				"tests/custom/"
+			]
+		}
+	}
+}

@@ -1,0 +1,66 @@
+class: RHo\UI\CountryCode
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out: DE
+  in: de
+- out: US
+  in: us
+- out: HU
+  in: HU
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: G1
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: "~~"
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: X1
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: H%
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: <>
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 2
+  in: X
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 2
+  in: "?"
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 2
+  in: "\""  
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 2
+  in: HUN
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 2
+  in: \\\
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: CC

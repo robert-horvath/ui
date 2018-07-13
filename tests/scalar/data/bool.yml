@@ -1,0 +1,36 @@
+class: RHo\UI\Boolean
+mockPregMatch: FALSE
+valid: # VALID DATA
+- out: true
+  in: true
+- out: false
+  in: false
+- out: true
+  in: t
+- out: false
+  in: f
+- out: true
+  in: y
+- out: false
+  in: n
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid boolean expression
+  in: 'true'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid boolean expression
+  in: 'false'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid boolean expression
+  in: 'yes'
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <char(t,f,y,n)|bool> data type required
+  in: 1
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <char(t,f,y,n)|bool> data type required
+  in: []

@@ -1,0 +1,64 @@
+class: RHo\UI\SemVer
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out: 0.0.0
+  in: 0.0.0
+- out: 1.5.10
+  in: 1.5.10
+- out: 6789.45671.45981
+  in: 6789.45671.45981
+- out: 2.0.10
+  in: 2.0.10
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: -1.0.0
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 1.x.2
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: "1,2.0"
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 1.0.2.
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 0.0.0.0
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 5
+  in: ""
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 5
+  in: "7.0"
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 5
+  in: "5.10"  
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 16
+  in: 78345.34891.23675
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: 6.7.1

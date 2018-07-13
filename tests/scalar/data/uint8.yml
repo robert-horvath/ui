@@ -1,0 +1,70 @@
+class: RHo\UI\UInt8
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out: 0
+  in: 0
+- out: 1
+  in: '1'
+- out: 255
+  in: 255
+- out: 100
+  in: 100
+- out: 254
+  in: '254'
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::INT_TOO_SMALL
+    txt: Integer too small
+  in: -1
+- err:
+    code: RHo\UI\Exception::INT_TOO_SMALL
+    txt: Integer too small
+  in: -128
+- err:
+    code: RHo\UI\Exception::INT_OUT_OF_RANGE
+    txt: Out of 64 bit range
+  in: '-9223372036854775809'
+- err:
+    code: RHo\UI\Exception::INT_TOO_SMALL
+    txt: Integer too small
+  in: '-127'
+- err:
+    code: RHo\UI\Exception::INT_TOO_BIG
+    txt: Integer too big
+  in: '256'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '+257'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: ''
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '5.6'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '1oo'
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: -4.2
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: '8'

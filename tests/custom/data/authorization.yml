@@ -1,0 +1,69 @@
+class: RHo\UI\Authorization
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out:
+    object: O:8:"stdClass":2:{s:8:"dateTime";O:8:"DateTime":3:{s:4:"date";s:26:"2018-05-23 18:22:25.169378";s:13:"timezone_type";i:2;s:8:"timezone";s:3:"GMT";}s:5:"token";s:64:"vGQMxNtTGYgZrx9NYNDPr6YoUfqq3GaXNQiHSIJv0tLJdCNdIidjOKqWqBghyeDb";}
+  in: Bearer vGQMxNtTGYgZrx9NYNDPr6YoUfqq3GaXNQiHSIJv0tLJdCNdIidjOKqWqBghyeDb~Wed.23-May-2018_18/22/25.169378_GMT
+- out:
+    object: O:8:"stdClass":2:{s:8:"dateTime";O:8:"DateTime":3:{s:4:"date";s:26:"2008-01-19 23:51:12.123456";s:13:"timezone_type";i:2;s:8:"timezone";s:3:"GMT";}s:5:"token";s:64:"0cpIvFFBgVGCXQhRbNwtVicwWobUQupDDwcuHGeXtdFTxFNUPCfvGhkQAjbdssgX";}
+  in: Bearer     0cpIvFFBgVGCXQhRbNwtVicwWobUQupDDwcuHGeXtdFTxFNUPCfvGhkQAjbdssgX~Sat.19-Jan-2008_23/51/12.123456_GMT
+- out:
+    object: O:8:"stdClass":2:{s:8:"dateTime";O:8:"DateTime":3:{s:4:"date";s:26:"1999-01-01 00:00:00.000001";s:13:"timezone_type";i:2;s:8:"timezone";s:3:"GMT";}s:5:"token";s:64:"0000000000000000000000000000000000000000000000000000000000000000";}
+  in: Bearer 0000000000000000000000000000000000000000000000000000000000000000~Fri.01-Jan-1999_00/00/00.000001_GMT
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid free formatted date and time string
+  in: Bearer vGQMxNtTGYgZrx9NYNDPr6YoUfqq3GaXNQiHSIJv0tLJdCNdIidjOKqWqBghyeDb~Wed.23-NNN-2018_18/22/25.169378_GMT
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: Bearer =
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: Bearer ABC0xyz12-._~+/=1
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: ABC0xyz12-._~+/=
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: BeareR A=
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 1abcd  =
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '12345678'
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 8
+  in: 'Bearer '
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 8
+  in: Bearer=
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 150
+  in: Bearer mK84y4bQ5y0BLoYJUnBPtA5GQXcPC442KVOVdIZH9gZ4ultfIIOdLxhJ9DId5Rj2~Mon.05-Sep-2010_12/34/56.987654_CEST===========================================
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: Bearer =

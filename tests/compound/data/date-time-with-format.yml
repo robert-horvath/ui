@@ -1,0 +1,61 @@
+class: RHo\UI\DateTimeWithFormat
+mockPregMatch: FALSE
+valid: # VALID DATA
+- out: 
+    object: O:8:"DateTime":3:{s:4:"date";s:26:"2013-02-15 19:43:27.056128";s:13:"timezone_type";i:2;s:8:"timezone";s:3:"CET";}
+  in: Fri.2013-02-15_19/43/27.056128_CET
+  format: D.Y-m-d_H/i/s.u_T
+- out: 
+    object: O:8:"DateTime":3:{s:4:"date";s:26:"2015-03-21 21:12:45.000001";s:13:"timezone_type";i:2;s:8:"timezone";s:3:"GMT";}
+  in: Sat.2015_03_21_21/12/45.000001_GMT
+  format: D.Y_m_d_H/i/s.u_T
+- out: 
+    object: O:8:"DateTime":3:{s:4:"date";s:26:"2018-01-01 23:59:59.100000";s:13:"timezone_type";i:3;s:8:"timezone";s:3:"UTC";}
+  in: Mon.2017/12/31-23/59/59.100000_UTC
+  format: D.Y/m/d-H/i/s.u_T
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid free formatted date and time string
+  in: 2013-02-15 19:43:27.056128 CET
+  format: D.Y-m-d H/i/s.u_T
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid free formatted date and time string
+  in: 1999-01-01
+  format: Y-m_d
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid free formatted date and time string
+  in: 00:00:00
+  format: H/i/s
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 4
+  in: '2:0'
+  format: H:i
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 64
+  in: '12345678901234567890123456789012345678901234567890123456789012345'
+  format: H/i/s
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: -100
+  format: ''
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+  format: ''
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+  format: ''
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+  format: ''

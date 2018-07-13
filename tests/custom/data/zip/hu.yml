@@ -1,0 +1,62 @@
+class: RHo\UI\Zip\Hu
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out: '1007'
+  in: 1007
+- out: '9985'
+  in: 9985
+- out: '1222'
+  in: '1222'
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '0x00'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 'AAAA'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '123X'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: 'o123'
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: '875-'
+- err:
+    code: RHo\UI\Exception::INT_OUT_OF_RANGE
+    txt: Out of 64 bit range
+  in: '-9223372036854775809'
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string|int> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::INT_NOT_ALLOWED
+    txt: Not allowed integer value
+  in: '1000'
+- err:
+    code: RHo\UI\Exception::INT_TOO_SMALL
+    txt: Integer too small
+  in: '-000002'
+- err:
+    code: RHo\UI\Exception::INT_TOO_SMALL
+    txt: Integer too small
+  in: -1
+- err:
+    code: RHo\UI\Exception::INT_TOO_BIG
+    txt: Integer too big
+  in: '10000'
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: '2045'

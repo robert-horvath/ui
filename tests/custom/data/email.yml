@@ -1,0 +1,42 @@
+class: RHo\UI\Email
+mockPregMatch: FALSE
+valid: # VALID DATA
+- out: email@addr.ess
+  in: email@addr.ess
+- out: a@b.cd
+  in: a@b.cd
+- out: gmail@email.com
+  in: gmail@email.com
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid e-mail address
+  in: a@@b.cd
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid e-mail address
+  in: email @addr.com
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Invalid e-mail address
+  in: email
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 5
+  in: a@bc
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 254
+  in: cxa084vt392AFvw4KKG9Y41avTZGnsCxyxtiPD8jXVT72nVj6ZXIcoCGEylJLOmI6AIZbyhqLnbgIFsCYhAU50gI41QIb0L1crZe1Z5StjuL2alNVWa9YwaPM1cFJjM1IGhYjhAlYvylI7RY59jUmbDBYXDGN0RqGdipdO07SPeHAPcpYhjLcnYGYt4IYJ5ovIlbA2bDwaHldi7fKgYUXbGF5EVq3l6eMLSI9dbIaaX8g9iFgrebiuaG40mAh0w

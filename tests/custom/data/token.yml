@@ -1,0 +1,50 @@
+class: RHo\UI\AlphaNumToken
+mockPregMatch: TRUE
+valid: # VALID DATA
+- out: ABCabc123
+  in: ABCabc123
+  size: 9
+- out: hNZnDSZ5LdqYyvIoU0hmfA63hLqm5XU6L5KFZhCir3vhpOtwXpIQGsvZZ1tNARFGEZCu63UESqpyZ7lm
+  in: hNZnDSZ5LdqYyvIoU0hmfA63hLqm5XU6L5KFZhCir3vhpOtwXpIQGsvZZ1tNARFGEZCu63UESqpyZ7lm
+  size: 80
+- out: '1234567890'
+  in: '1234567890'
+  size: 10
+invalid: # INVALID DATA
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: c1TQp9AFdqßkDoWil2rDaWYwé2RC1eKDYShLbO9dLFdgVy9q107rJXeJLp71
+  size: 60
+- err:
+    code: RHo\UI\Exception::STR_TOO_LONG
+    txt: Length has to be less than or equal to 19
+  in: SDYMLTo449UTdG2DGFtN
+  size: 19
+- err:
+    code: RHo\UI\Exception::STR_TOO_SHORT
+    txt: Length has to be greater than or equal to 5
+  in: jH65
+  size: 5
+- err:
+    code: RHo\UI\Exception::VALIDATION_FAILED
+    txt: Pattern does not match given subject
+  in: ö
+  size: 1
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: true
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: false
+- err:
+    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    txt: <string> data type required
+  in: []
+- err:
+    code: RHo\UI\Exception::REGEXP_ERROR
+    txt: Regular expression error
+  in: abcd
+  size: 4
