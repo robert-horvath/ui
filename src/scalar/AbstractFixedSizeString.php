@@ -9,7 +9,7 @@ namespace RHo\UI;
 abstract class AbstractFixedSizeString extends AbstractUI
 {
 
-    final protected function validateType(): void
+    final protected function checkType(): void
     {
         if (! is_string($this->value))
             throw new Exception('<string> data type required', Exception::INVALID_DATA_TYPE);

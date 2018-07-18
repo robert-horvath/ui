@@ -10,7 +10,7 @@ class Email extends AbstractString
 
     protected const MAX_LENGTH = 254;
 
-    protected function validateStrSyntax(): void
+    protected function checkStrSyntax(): void
     {
         if (false === filter_var($this->value, FILTER_VALIDATE_EMAIL))
             // filter_var() doesn't set error_get_last (), so return const text

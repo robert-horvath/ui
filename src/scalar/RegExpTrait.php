@@ -11,7 +11,7 @@ trait RegExpTrait
     /** @var array */
     protected $matches;
 
-    private function validateStrRegExpSyntax(): void
+    private function checkStrRegExpSyntax(): void
     {
         $ret = @preg_match($this->pattern, $this->value, $this->matches);
         if (1 === $ret)

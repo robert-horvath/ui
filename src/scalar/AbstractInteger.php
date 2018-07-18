@@ -32,29 +32,29 @@ abstract class AbstractInteger extends AbstractUI
         parent::__construct($value);
     }
 
-    final protected function validateType(): void
+    final protected function checkType(): void
     {
         if (! is_string($this->value) && ! is_int($this->value))
             throw new Exception('<string|int> data type required', Exception::INVALID_DATA_TYPE);
     }
 
-    protected function validateSyntax(): void
+    protected function checkSyntax(): void
     {
         if (is_string($this->value))
             $this->convertStrToInt();
-        $this->verifyIntRange();
+        $this->checkIntRange();
     }
 
     private function convertStrToInt(): void
     {
-        $this->validateStrRegExpSyntax();
+        $this->checkStrRegExpSyntax();
         $i = intval($this->value); // returns either PHP_INT_MIN or PHP_INT_MAX when overflows
         if (strval($i) !== $this->value && ($i === PHP_INT_MIN || $i === PHP_INT_MAX))
             throw new Exception('Out of 64 bit range', Exception::INT_OUT_OF_RANGE);
         $this->value = $i;
     }
 
-    private function verifyIntRange(): void
+    private function checkIntRange(): void
     {
         if ($this->value > $this->max)
             throw new Exception('Integer too big', Exception::INT_TOO_BIG);

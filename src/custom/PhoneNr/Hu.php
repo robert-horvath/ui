@@ -21,7 +21,7 @@ class Hu extends AbstractStringWithRegExp
         70
     ];
 
-    public function value(): \stdClass
+    protected function value(): \stdClass
     {
         $o = new \stdClass();
         $o->value = $this->matches[0];

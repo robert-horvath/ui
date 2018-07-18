@@ -41,7 +41,7 @@ invalid: # INVALID DATA
     txt: <string|int> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::INT_NOT_ALLOWED
+    code: RHo\UI\Exception::NOT_ALLOWED_INT_VALUE
     txt: Not allowed integer value
   in: '1000'
 - err:

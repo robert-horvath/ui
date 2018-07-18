@@ -12,34 +12,34 @@ abstract class AbstractUI implements UIInterface
      * Constructor
      *
      * @param mixed $value
-     *            The value to validate.
+     *            The value to filter.
      */
     protected function __construct($value)
     {
         $this->value = $value;
-        $this->validate();
+        $this->filter();
     }
 
     abstract protected function value();
 
-    abstract protected function validateType(): void;
+    abstract protected function checkType(): void;
 
-    abstract protected function validateSyntax(): void;
+    abstract protected function checkSyntax(): void;
 
-    final protected function validate(): void
+    private function filter(): void
     {
-        $this->validateType();
-        $this->validateSyntax();
+        $this->checkType();
+        $this->checkSyntax();
     }
 
     /**
-     * Validate mandatory user input
+     * Filter mandatory user input
      *
      * @param mixed ...$args
-     *            Variable-length argument list to validate the user input.
-     *            Depends on concreate class.
-     * @throws \RHo\UI\Exception Validation failed
-     * @return mixed Validated user input
+     *            Variable-length parameter list to filter the user input.
+     *            The first parameter is always the not filtered user input.
+     * @throws \RHo\UI\Exception Filering user input failed
+     * @return mixed Filtered user input
      */
     final public static function mandatory(...$args)
     {
@@ -49,13 +49,13 @@ abstract class AbstractUI implements UIInterface
     }
 
     /**
-     * Validate optional user input
+     * Filter optional user input
      *
      * @param mixed ...$args
-     *            Variable-length argument list to validate the user input.
-     *            Depends on concreate class.
-     * @throws \RHo\UI\Exception Validation failed
-     * @return mixed|NULL Validated user input or NULL if user input missing
+     *            Variable-length parameter list to filter the user input.
+     *            The first parameter is always the not filtered user input.
+     * @throws \RHo\UI\Exception Filering user input failed
+     * @return mixed|NULL Filtered user input or NULL if user input missing
      */
     final public static function optional(...$args)
     {

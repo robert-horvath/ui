@@ -14,12 +14,12 @@ class DateTime extends AbstractString
      *
      * @return \DateTime The validated value
      */
-    public function value(): \DateTime
+    protected function value(): \DateTime
     {
         return $this->value;
     }
 
-    protected function validateStrSyntax(): void
+    protected function checkStrSyntax(): void
     {
         try {
             $this->value = new \DateTime($this->value);

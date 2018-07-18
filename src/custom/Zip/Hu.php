@@ -22,12 +22,12 @@ class Hu extends AbstractInteger
 
     protected const MAX_INT = 9999;
 
-    protected function validateSyntax(): void
+    protected function checkSyntax(): void
     {
-        parent::validateSyntax();
+        parent::checkSyntax();
         $db = new \SQLite3(self::SQLITE_DB_PATH, SQLITE3_OPEN_READONLY);
         if ($db->querySingle("SELECT COUNT(*) FROM postal_codes WHERE zip=" . $this->value) === 0)
-            throw new Exception('Not allowed integer value', Exception::INT_NOT_ALLOWED);
+            throw new Exception('Not allowed integer value', Exception::NOT_ALLOWED_INT_VALUE);
         $this->value = strval($this->value);
     }
 }

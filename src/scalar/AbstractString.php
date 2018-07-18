@@ -26,15 +26,15 @@ abstract class AbstractString extends AbstractFixedSizeString
         parent::__construct($value);
     }
 
-    abstract protected function validateStrSyntax(): void;
+    abstract protected function checkStrSyntax(): void;
 
-    final protected function validateSyntax(): void
+    final protected function checkSyntax(): void
     {
-        $this->verifyStrLen();
-        $this->validateStrSyntax();
+        $this->checkStrLen();
+        $this->checkStrSyntax();
     }
 
-    private function verifyStrLen(): void
+    private function checkStrLen(): void
     {
         $len = mb_strlen($this->value);
         if ($len < $this->minLen)

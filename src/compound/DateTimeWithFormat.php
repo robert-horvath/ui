@@ -14,7 +14,7 @@ class DateTimeWithFormat extends DateTime
         parent::__construct($value);
     }
 
-    protected function validateStrSyntax(): void
+    protected function checkStrSyntax(): void
     {
         if (false === ($this->value = \DateTime::createFromFormat($this->format, $this->value)))
             throw new Exception('Invalid free formatted date and time string', Exception::VALIDATION_FAILED);

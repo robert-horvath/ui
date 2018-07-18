@@ -18,8 +18,8 @@ abstract class AbstractStringWithRegExp extends AbstractString
         parent::__construct($value, $minLen, $maxLen);
     }
 
-    protected function validateStrSyntax(): void
+    protected function checkStrSyntax(): void
     {
-        $this->validateStrRegExpSyntax();
+        $this->checkStrRegExpSyntax();
     }
 }

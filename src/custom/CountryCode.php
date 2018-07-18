@@ -11,7 +11,7 @@ class CountryCode extends StrAny
 
     protected const REG_EXP_PATTERN = '/^[a-z]{2}$/i';
 
-    public function value(): string
+    protected function value(): string
     {
         return strtoupper($this->value);
     }

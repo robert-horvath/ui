@@ -17,7 +17,7 @@ class StrFixed extends AbstractFixedSizeString
         parent::__construct($value);
     }
 
-    final protected function validateSyntax(): void
+    final protected function checkSyntax(): void
     {
         foreach ($this->items as $item)
             if ($item === $this->value)

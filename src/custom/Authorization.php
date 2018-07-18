@@ -29,16 +29,16 @@ class Authorization extends AbstractStringWithRegExp
      * @throws Exception Validation failed
      * @return Authorization Validated authorization
      */
-    final protected function validateStrSyntax(): void
+    final protected function checkStrSyntax(): void
     {
         BearerAuthScheme::mandatory($this->value, self::MAX_LENGTH);
-        parent::validateStrSyntax();
+        parent::checkStrSyntax();
         
         $this->alphaNumToken = AlphaNumToken::mandatory($this->matches[1], self::TOKEN_LEN);
         $this->dateTime = DateTimeWithFormat::mandatory($this->matches[2], self::DATETIME_FORMAT);
     }
 
-    public function value(): \stdClass
+    protected function value(): \stdClass
     {
         $o = new \stdClass();
         $o->dateTime = $this->dateTime;

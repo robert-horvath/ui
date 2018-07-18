@@ -15,13 +15,13 @@ final class Boolean extends AbstractUI
         return $this->value;
     }
 
-    protected function validateType(): void
+    protected function checkType(): void
     {
         if (! is_string($this->value) && ! is_bool($this->value))
             throw new Exception('<char(t,f,y,n)|bool> data type required', Exception::INVALID_DATA_TYPE);
     }
 
-    protected function validateSyntax(): void
+    protected function checkSyntax(): void
     {
         if (is_string($this->value))
             $this->convertStrToBool();
