@@ -2,10 +2,10 @@
 declare(strict_types = 1);
 namespace RHo\UI\Town;
 
+use RHo\UIException\Exception;
 use RHo\UI\ {
     AbstractInteger,
-    StrValueTrait,
-    Exception
+    StrValueTrait
 };
 
 /**

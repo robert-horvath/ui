@@ -15,38 +15,38 @@ valid: # VALID DATA
   in: '9223372036854775807'
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::INT_OUT_OF_RANGE
+    code: RHo\UIException\Exception::INT_OUT_OF_RANGE
     txt: Out of 64 bit range
   in: '-9223372036854775809'
 - err:
-    code: RHo\UI\Exception::INT_OUT_OF_RANGE
+    code: RHo\UIException\Exception::INT_OUT_OF_RANGE
     txt: Out of 64 bit range
   in: '9223372036854775808'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: '12345678901234567890'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: ''
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: false
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: -12.5
 - err:
-    code: RHo\UI\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_ERROR
     txt: Regular expression error
   in: '7865423456'

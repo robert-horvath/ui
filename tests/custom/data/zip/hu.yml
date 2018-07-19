@@ -9,54 +9,54 @@ valid: # VALID DATA
   in: '1222'
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: '0x00'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: 'AAAA'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: '123X'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: 'o123'
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: '875-'
 - err:
-    code: RHo\UI\Exception::INT_OUT_OF_RANGE
+    code: RHo\UIException\Exception::INT_OUT_OF_RANGE
     txt: Out of 64 bit range
   in: '-9223372036854775809'
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string|int> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::NOT_ALLOWED_INT_VALUE
+    code: RHo\UIException\Exception::NOT_ALLOWED_INT_VALUE
     txt: Not allowed integer value
   in: '1000'
 - err:
-    code: RHo\UI\Exception::INT_TOO_SMALL
+    code: RHo\UIException\Exception::INT_TOO_SMALL
     txt: Integer too small
   in: '-000002'
 - err:
-    code: RHo\UI\Exception::INT_TOO_SMALL
+    code: RHo\UIException\Exception::INT_TOO_SMALL
     txt: Integer too small
   in: -1
 - err:
-    code: RHo\UI\Exception::INT_TOO_BIG
+    code: RHo\UIException\Exception::INT_TOO_BIG
     txt: Integer too big
   in: '10000'
 - err:
-    code: RHo\UI\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_ERROR
     txt: Regular expression error
   in: '2045'

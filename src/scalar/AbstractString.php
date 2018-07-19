@@ -2,6 +2,8 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
+use RHo\UIException\Exception;
+
 /**
  *
  * @abstract This class might want to return any value type.

@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHoTest\UI;
 
-use RHo\UI\Exception;
+use RHo\UIException\Exception;
 
 class StrAnyTest extends AbstractScalarTestCase
 {

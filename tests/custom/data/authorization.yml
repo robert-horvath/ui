@@ -12,58 +12,58 @@ valid: # VALID DATA
   in: Bearer 0000000000000000000000000000000000000000000000000000000000000000~Fri.01-Jan-1999_00/00/00.000001_GMT
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Invalid free formatted date and time string
   in: Bearer vGQMxNtTGYgZrx9NYNDPr6YoUfqq3GaXNQiHSIJv0tLJdCNdIidjOKqWqBghyeDb~Wed.23-NNN-2018_18/22/25.169378_GMT
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: Bearer =
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: Bearer ABC0xyz12-._~+/=1
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: ABC0xyz12-._~+/=
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: BeareR A=
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: 1abcd  =
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: '12345678'
 - err:
-    code: RHo\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: Length has to be greater than or equal to 8
   in: 'Bearer '
 - err:
-    code: RHo\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: Length has to be greater than or equal to 8
   in: Bearer=
 - err:
-    code: RHo\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: Length has to be less than or equal to 150
   in: Bearer mK84y4bQ5y0BLoYJUnBPtA5GQXcPC442KVOVdIZH9gZ4ultfIIOdLxhJ9DId5Rj2~Mon.05-Sep-2010_12/34/56.987654_CEST===========================================
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: false
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_ERROR
     txt: Regular expression error
   in: Bearer =

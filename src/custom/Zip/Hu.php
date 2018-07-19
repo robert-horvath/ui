@@ -2,10 +2,10 @@
 declare(strict_types = 1);
 namespace RHo\UI\Zip;
 
+use RHo\UIException\Exception;
 use RHo\UI\ {
     AbstractInteger,
-    StrValueTrait,
-    Exception
+    StrValueTrait
 };
 
 /**

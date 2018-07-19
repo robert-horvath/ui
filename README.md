@@ -7,7 +7,7 @@ The user input validation is the outer defensive perimeter for your web applicat
 
 The module supports built in PHP primitive types (e.g.: [boolean](http://php.net/manual/en/language.types.boolean.php), [integer](http://php.net/manual/en/language.types.integer.php), [string](http://php.net/manual/en/language.types.string.php)) as well as custom defined types (e.g.: Email, Password).
 
-If the validation fails, then an exception of type ```\RHo\UI\Exception``` is raised with special error code describing the reason of failure. 
+If the validation fails, then an exception of type ```\RHo\UIException\Exception``` is raised with special error code describing the reason of failure. 
 
 Use ```::mandatory``` class method to validate mandatory user input and ```::optional``` class method to validate optional user input.
 
@@ -22,7 +22,7 @@ try {
     $word = UInt16::optional(NULL);
     $dt = DateTime::mandatory('2000-01-01 12:30:50');
     var_dump($bool, $str, $byte, $word, $dt);
-} catch (Exception $e) {
+} catch (\RHo\UIException\Exception $e) {
     // Validation error.
     // Check $e->code() for more details.
 }
@@ -48,7 +48,7 @@ namespace RHo\UI;
 
 try {
     $int = Int32::mandatory(5.7);
-} catch (Exception $e) {
+} catch (\RHo\UIException\Exception $e) {
     // Validation error.
     var_dump($e->getMessage(), $e->getCode());
 }
@@ -65,7 +65,7 @@ namespace RHo\UI;
 try {
     $auth = Authorization::mandatory('Bearer XauPV7DpJvVPJD7RW4eaLmGLa4cPQxBgwEMtuGuuX8QkNjSuHd9z82cpTdTDsGFM~Thu.04-Jan-2018_10/15/45.610572_GMT');
     var_dump($auth);
-} catch (Exception $e) {
+} catch (\RHo\UIException\Exception $e) {
     // Validation error.
     var_dump($e->getMessage(), $e->getCode());
 }

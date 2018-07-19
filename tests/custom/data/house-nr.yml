@@ -19,50 +19,50 @@ valid: # VALID DATA
   in: 150 H/3
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: A5
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: "~"
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: $$
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: ()
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: =
 - err:
-    code: RHo\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: Length has to be greater than or equal to 1
   in: ""
 - err:
-    code: RHo\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: Length has to be less than or equal to 10
   in: 1234567890v
 - err:
-    code: RHo\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: Length has to be less than or equal to 10
   in: 3891/acf/n?
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: false
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_ERROR
     txt: Regular expression error
   in: 8/b.

@@ -15,38 +15,38 @@ valid: # VALID DATA
   in: 2011-01-01T15:03:01.012345Z
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Invalid date and time string
   in: 2013-02-15 19:43:27.123456 XXX
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Invalid date and time string
   in: 1999-01-32
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Invalid date and time string
   in: 00:00:61
 - err:
-    code: RHo\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: Length has to be greater than or equal to 4
   in: '123'
 - err:
-    code: RHo\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: Length has to be less than or equal to 64
   in: '12345678901234567890123456789012345678901234567890123456789012345'
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: 1
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: false
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: []

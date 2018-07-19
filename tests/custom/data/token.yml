@@ -12,39 +12,39 @@ valid: # VALID DATA
   size: 10
 invalid: # INVALID DATA
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: c1TQp9AFdqßkDoWil2rDaWYwé2RC1eKDYShLbO9dLFdgVy9q107rJXeJLp71
   size: 60
 - err:
-    code: RHo\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: Length has to be less than or equal to 19
   in: SDYMLTo449UTdG2DGFtN
   size: 19
 - err:
-    code: RHo\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: Length has to be greater than or equal to 5
   in: jH65
   size: 5
 - err:
-    code: RHo\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: Pattern does not match given subject
   in: ö
   size: 1
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: true
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: false
 - err:
-    code: RHo\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: <string> data type required
   in: []
 - err:
-    code: RHo\UI\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_ERROR
     txt: Regular expression error
   in: abcd
   size: 4
