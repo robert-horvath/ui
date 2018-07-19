@@ -28,6 +28,6 @@ class Hu extends AbstractInteger
         $db = new \SQLite3(self::SQLITE_DB_PATH, SQLITE3_OPEN_READONLY);
         $this->value = $db->querySingle("SELECT town FROM settlements WHERE id=" . $this->value);
         if ($this->value === NULL)
-            throw new Exception('Not allowed integer value', Exception::NOT_ALLOWED_INT_VALUE);
+            throw new Exception('Integer number not allowed', Exception::INT_NUMBER_NOT_ALLOWED);
     }
 }

@@ -29,8 +29,8 @@ invalid: # INVALID DATA
     txt: Pattern does not match given subject
   in: '-875-'
 - err:
-    code: RHo\UIException\Exception::INT_OUT_OF_RANGE
-    txt: Out of 64 bit range
+    code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
+    txt: Integer number out of range
   in: '-9223372036854775809'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -45,20 +45,20 @@ invalid: # INVALID DATA
     txt: <string|int> data type required
   in: []
 - err:
-    code: RHo\UIException\Exception::NOT_ALLOWED_INT_VALUE
-    txt: Not allowed integer value
+    code: RHo\UIException\Exception::INT_NUMBER_NOT_ALLOWED
+    txt: Integer number not allowed
   in: '0000'
 - err:
-    code: RHo\UIException\Exception::INT_TOO_SMALL
-    txt: Integer too small
+    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
+    txt: Integer number too small
   in: '-000001'
 - err:
-    code: RHo\UIException\Exception::INT_TOO_SMALL
-    txt: Integer too small
+    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
+    txt: Integer number too small
   in: -10
 - err:
-    code: RHo\UIException\Exception::INT_TOO_BIG
-    txt: Integer too big
+    code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
+    txt: Integer number too large
   in: '3573'
 - err:
     code: RHo\UIException\Exception::REGEXP_ERROR

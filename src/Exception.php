@@ -5,25 +5,25 @@ namespace RHo\UIException;
 class Exception extends \Exception
 {
 
-    public const MANDATORY_VALUE_MISSING = 1;
+    public const MANDATORY_VALUE_MISSING = 100;
 
-    public const INVALID_DATA_TYPE = 2;
+    public const INVALID_DATA_TYPE = 101;
 
-    public const VALIDATION_FAILED = 3;
+    public const VALIDATION_FAILED = 102;
 
-    public const REGEXP_ERROR = 4;
+    public const REGEXP_ERROR = 103;
 
-    public const INT_TOO_SMALL = 5;
+    public const INT_NUMBER_TOO_SMALL = 200;
 
-    public const INT_OUT_OF_RANGE = 9;
+    public const INT_NUMBER_TOO_LARGE = 201;
 
-    public const INT_TOO_BIG = 6;
+    public const INT_NUMBER_OUT_OF_RANGE = 202;
 
-    public const STR_TOO_SHORT = 7;
+    public const INT_NUMBER_NOT_ALLOWED = 203;
 
-    public const STR_TOO_LONG = 8;
+    public const STR_TOO_SHORT = 300;
 
-    public const ARRAY_ITEM_NOT_FOUND = 10;
+    public const STR_TOO_LONG = 301;
 
-    public const NOT_ALLOWED_INT_VALUE = 11;
+    public const ARRAY_ITEM_NOT_FOUND = 400;
 }
