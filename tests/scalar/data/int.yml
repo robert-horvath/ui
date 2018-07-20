@@ -28,73 +28,73 @@ valid: # VALID DATA
 invalid: # INVALID DATA
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
-    txt: Integer number too large
+    txt: /^Integer number too large$/
   in: 1
   min: NULL
   max: NULL
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
-    txt: Integer number too small
+    txt: /^Integer number too small$/
   in: -10
   min: -9
   max: 0
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
-    txt: Integer number too large
+    txt: /^Integer number too large$/
   in: '5'
   min: -5
   max: 4
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
-    txt: Integer number out of range
+    txt: /^Integer number out of range$/
   in: '9223372036854775808'
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '+99'
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: ''
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: integer
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: true
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: false
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: []
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: -0.5
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: Regular expression error
+    txt: /^Regular expression error$/
   in: '0'
   min: 0
   max: 0

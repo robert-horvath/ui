@@ -10,45 +10,45 @@ valid: # VALID DATA
 invalid: # INVALID DATA
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '00000'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: 'AAAAY'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '123XB'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '01234'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '-875-'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string> data type required
+    txt: /^<string> data type required$/
   in: 40625
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string> data type required
+    txt: /^<string> data type required$/
   in: []
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: Length has to be greater than or equal to 5
+    txt: /^Length has to be greater than or equal to 5$/
   in: '1234'
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: Length has to be greater than or equal to 5
+    txt: /^Length has to be greater than or equal to 5$/
   in: ''
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: Length has to be less than or equal to 5
+    txt: /^Length has to be less than or equal to 5$/
   in: '123456'
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: Regular expression error
+    txt: /^Regular expression error$/
   in: 'xabcd'

@@ -14,45 +14,45 @@ valid: # VALID DATA
 invalid: # INVALID DATA
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
-    txt: Integer number too small
+    txt: /^Integer number too small$/
   in: -1
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
-    txt: Integer number too large
+    txt: /^Integer number too large$/
   in: '65536'
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
-    txt: Integer number out of range
+    txt: /^Integer number out of range$/
   in: '-9223372036854775809'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '-1o'
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: ''
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: '1e510'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: true
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: false
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: []
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <int|string> data type required
+    txt: /^<int|string> data type required$/
   in: 5.601
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: Regular expression error
+    txt: /^Regular expression error$/
   in: '1'

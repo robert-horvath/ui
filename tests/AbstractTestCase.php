@@ -67,7 +67,7 @@ abstract class AbstractTestCase extends TestCase
         $this->assertNull($this->className::optional(NULL));
         
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Mandatory value missing');
+        $this->expectExceptionMessageRegExp('/^Mandatory value missing$/');
         $this->expectExceptionCode(Exception::MANDATORY_VALUE_MISSING);
         $this->className::mandatory(NULL);
     }
@@ -98,7 +98,7 @@ abstract class AbstractTestCase extends TestCase
         $mockPregMatch = ($errCode === Exception::REGEXP_EXECUTION_ERROR && $this->mockPregMatch);
         
         $this->expectException(Exception::class);
-        $this->expectExceptionMessage($err['txt']);
+        $this->expectExceptionMessageRegExp($err['txt']);
         $this->expectExceptionCode($errCode);
     }
 }

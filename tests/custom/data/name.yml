@@ -14,45 +14,45 @@ valid: # VALID DATA
 invalid: # INVALID DATA
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: (Ádám)
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: Tamás!
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: Nam3
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: "&/%$§"
 - err:
     code: RHo\UIException\Exception::VALIDATION_FAILED
-    txt: Pattern does not match given subject
+    txt: /^Pattern does not match given subject$/
   in: Rób+ert
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: Length has to be greater than or equal to 2
+    txt: /^Length has to be greater than or equal to 2$/
   in: L
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: Length has to be less than or equal to 30
+    txt: /^Length has to be less than or equal to 30$/
   in: This is a very long name.......
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string> data type required
+    txt: /^<string> data type required$/
   in: false
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string> data type required
+    txt: /^<string> data type required$/
   in: true
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string> data type required
+    txt: /^<string> data type required$/
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: Regular expression error
+    txt: /^Regular expression error$/
   in: Hector Sausage-Hausen
