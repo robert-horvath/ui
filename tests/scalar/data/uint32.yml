@@ -36,21 +36,21 @@ invalid: # INVALID DATA
   in: '+0'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: true
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: false
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: []
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: -0.99999999999
 - err:
-    code: RHo\UIException\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: Regular expression error
   in: '32'

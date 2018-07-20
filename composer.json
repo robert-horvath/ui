@@ -9,7 +9,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"RHo\\UIException\\": "src/",
+			"RHo\\": "src/",
 			"RHo\\UI\\" : [
 				"src/",
 				"src/scalar/",

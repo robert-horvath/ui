@@ -29,7 +29,7 @@ class StrAnyTest extends AbstractScalarTestCase
      */
     public function testMandatoryInvalidUI(array $err, ...$args): void
     {
-        if (constant($err['code']) === Exception::REGEXP_ERROR)
+        if (constant($err['code']) === Exception::REGEXP_EXECUTION_ERROR)
             $this->checkLastPregError = TRUE;
         parent::testMandatoryInvalidUI($err, ...$args);
     }
@@ -39,7 +39,7 @@ class StrAnyTest extends AbstractScalarTestCase
      */
     public function testOptionalInvalidUI(array $err, ...$args): void
     {
-        if ($err['code'] === Exception::REGEXP_ERROR)
+        if ($err['code'] === Exception::REGEXP_EXECUTION_ERROR)
             $this->checkLastPregError = TRUE;
         parent::testOptionalInvalidUI($err, ...$args);
     }

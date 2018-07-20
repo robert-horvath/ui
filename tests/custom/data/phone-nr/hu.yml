@@ -53,6 +53,6 @@ invalid: # INVALID DATA
     txt: Length has to be less than or equal to 17
   in: '+36-71-34567890123'
 - err:
-    code: RHo\UIException\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: Regular expression error
   in: '+36-60-789-1234'

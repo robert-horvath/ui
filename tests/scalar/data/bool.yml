@@ -28,9 +28,9 @@ invalid: # INVALID DATA
   in: 'yes'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <char(t,f,y,n)|bool> data type required
+    txt: <char[t,f,y,n]|bool> data type required
   in: 1
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <char(t,f,y,n)|bool> data type required
+    txt: <char[t,f,y,n]|bool> data type required
   in: []

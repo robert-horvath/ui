@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI\Zip;
 
-use RHo\UIException\Exception;
+use RHo\UIException\IntNumberNotAllowedException;
 use RHo\UI\ {
     AbstractInteger,
     StrValueTrait
@@ -27,7 +27,7 @@ class Hu extends AbstractInteger
         parent::checkSyntax();
         $db = new \SQLite3(self::SQLITE_DB_PATH, SQLITE3_OPEN_READONLY);
         if ($db->querySingle("SELECT COUNT(*) FROM postal_codes WHERE zip=" . $this->value) === 0)
-            throw new Exception('Integer number not allowed', Exception::INT_NUMBER_NOT_ALLOWED);
+            throw new IntNumberNotAllowedException();
         $this->value = strval($this->value);
     }
 }

@@ -2,7 +2,10 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ {
+    ValidationFailedException,
+    RegexpExecutionErrorException
+};
 
 trait RegExpTrait
 {
@@ -19,8 +22,8 @@ trait RegExpTrait
         if (1 === $ret)
             return;
         if (0 === $ret)
-            throw new Exception('Pattern does not match given subject', Exception::VALIDATION_FAILED);
+            throw new ValidationFailedException('Pattern does not match given subject');
         else
-            throw new Exception('Regular expression error', Exception::REGEXP_ERROR); // check -> preg_last_error()
+            throw new RegexpExecutionErrorException();
     }
 }

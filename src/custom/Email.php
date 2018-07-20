@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ValidationFailedException;
 
 class Email extends AbstractString
 {
@@ -16,7 +16,7 @@ class Email extends AbstractString
     {
         if (false === filter_var($this->value, FILTER_VALIDATE_EMAIL))
             // filter_var() doesn't set error_get_last (), so return const text
-            throw new Exception('Invalid e-mail address', Exception::VALIDATION_FAILED);
+            throw new ValidationFailedException('Invalid e-mail address');
     }
 }
  

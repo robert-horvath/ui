@@ -2,7 +2,12 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ {
+    InvalidDataTypeException,
+    IntNumberTooSmallException,
+    IntNumberTooLargeException,
+    IntNumberOutOfRangeException
+};
 
 /**
  *
@@ -37,7 +42,7 @@ abstract class AbstractInteger extends AbstractUI
     final protected function checkType(): void
     {
         if (! is_string($this->value) && ! is_int($this->value))
-            throw new Exception('<string|int> data type required', Exception::INVALID_DATA_TYPE);
+            throw new InvalidDataTypeException('int|string');
     }
 
     protected function checkSyntax(): void
@@ -52,15 +57,15 @@ abstract class AbstractInteger extends AbstractUI
         $this->checkStrRegExpSyntax();
         $i = intval($this->value); // returns either PHP_INT_MIN or PHP_INT_MAX when overflows
         if (strval($i) !== $this->value && ($i === PHP_INT_MIN || $i === PHP_INT_MAX))
-            throw new Exception('Integer number out of range', Exception::INT_NUMBER_OUT_OF_RANGE);
+            throw new IntNumberOutOfRangeException();
         $this->value = $i;
     }
 
     private function checkIntRange(): void
     {
         if ($this->value > $this->max)
-            throw new Exception('Integer number too large', Exception::INT_NUMBER_TOO_LARGE);
+            throw new IntNumberTooLargeException();
         if ($this->value < $this->min)
-            throw new Exception('Integer number too small', Exception::INT_NUMBER_TOO_SMALL);
+            throw new IntNumberTooSmallException($this->min);
     }
 }

@@ -70,30 +70,30 @@ invalid: # INVALID DATA
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: true
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: false
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: []
   min: 0
   max: 0
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: -0.5
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: Regular expression error
   in: '0'
   min: 0

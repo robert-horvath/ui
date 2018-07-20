@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ValidationFailedException;
 
 class DateTime extends AbstractString
 {
@@ -26,7 +26,7 @@ class DateTime extends AbstractString
         try {
             $this->value = new \DateTime($this->value);
         } catch (\Exception $e) {
-            throw new Exception('Invalid date and time string', Exception::VALIDATION_FAILED);
+            throw new ValidationFailedException('Invalid date and time string');
         }
     }
 }

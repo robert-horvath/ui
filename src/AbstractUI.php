@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\MandatoryValueMissingException;
 
 abstract class AbstractUI implements UIInterface
 {
@@ -46,7 +46,7 @@ abstract class AbstractUI implements UIInterface
     final public static function mandatory(...$args)
     {
         if (NULL === $args[0])
-            throw new Exception('Mandatory value missing', Exception::MANDATORY_VALUE_MISSING);
+            throw new MandatoryValueMissingException();
         return (new static(...$args))->value();
     }
 

@@ -11,7 +11,7 @@ class Exception extends \Exception
 
     public const VALIDATION_FAILED = 102;
 
-    public const REGEXP_ERROR = 103;
+    public const REGEXP_EXECUTION_ERROR = 103;
 
     public const INT_NUMBER_TOO_SMALL = 200;
 

@@ -2,7 +2,10 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ {
+    ValidationFailedException,
+    InvalidDataTypeException
+};
 
 final class Boolean extends AbstractUI
 {
@@ -20,7 +23,7 @@ final class Boolean extends AbstractUI
     protected function checkType(): void
     {
         if (! is_string($this->value) && ! is_bool($this->value))
-            throw new Exception('<char(t,f,y,n)|bool> data type required', Exception::INVALID_DATA_TYPE);
+            throw new InvalidDataTypeException('char[t,f,y,n]|bool');
     }
 
     protected function checkSyntax(): void
@@ -36,6 +39,6 @@ final class Boolean extends AbstractUI
         else if ($this->value === 'f' || $this->value === 'n')
             $this->value = false;
         else
-            throw new Exception('Invalid boolean expression', Exception::VALIDATION_FAILED);
+            throw new ValidationFailedException('Invalid boolean expression');
     }
 }

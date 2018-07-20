@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ArrayItemNotFoundException;
 
 class StrFixed extends AbstractFixedSizeString
 {
@@ -24,6 +24,6 @@ class StrFixed extends AbstractFixedSizeString
         foreach ($this->items as $item)
             if ($item === $this->value)
                 return;
-        throw new Exception('Array item not found', Exception::ARRAY_ITEM_NOT_FOUND);
+        throw new ArrayItemNotFoundException();
     }
 }

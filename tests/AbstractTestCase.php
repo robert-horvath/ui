@@ -95,7 +95,7 @@ abstract class AbstractTestCase extends TestCase
         global $mockPregMatch;
         
         $errCode = constant($err['code']);
-        $mockPregMatch = ($errCode === Exception::REGEXP_ERROR && $this->mockPregMatch);
+        $mockPregMatch = ($errCode === Exception::REGEXP_EXECUTION_ERROR && $this->mockPregMatch);
         
         $this->expectException(Exception::class);
         $this->expectExceptionMessage($err['txt']);

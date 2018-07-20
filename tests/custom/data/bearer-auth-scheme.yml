@@ -77,7 +77,7 @@ invalid: # INVALID DATA
   in: []
   maxLength: 0
 - err:
-    code: RHo\UIException\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: Regular expression error
   in: Bearer abc=
   maxLength: 15

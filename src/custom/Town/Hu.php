@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI\Town;
 
-use RHo\UIException\Exception;
+use RHo\UIException\IntNumberNotAllowedException;
 use RHo\UI\ {
     AbstractInteger,
     StrValueTrait
@@ -28,6 +28,6 @@ class Hu extends AbstractInteger
         $db = new \SQLite3(self::SQLITE_DB_PATH, SQLITE3_OPEN_READONLY);
         $this->value = $db->querySingle("SELECT town FROM settlements WHERE id=" . $this->value);
         if ($this->value === NULL)
-            throw new Exception('Integer number not allowed', Exception::INT_NUMBER_NOT_ALLOWED);
+            throw new IntNumberNotAllowedException();
     }
 }

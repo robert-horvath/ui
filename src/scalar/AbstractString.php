@@ -2,7 +2,10 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ {
+    StringTooShortException,
+    StringTooLongException
+};
 
 /**
  *
@@ -40,8 +43,8 @@ abstract class AbstractString extends AbstractFixedSizeString
     {
         $len = mb_strlen($this->value);
         if ($len < $this->minLen)
-            throw new Exception("Length has to be greater than or equal to $this->minLen", Exception::STR_TOO_SHORT);
+            throw new StringTooShortException("Length has to be greater than or equal to $this->minLen");
         if ($len > $this->maxLen)
-            throw new Exception("Length has to be less than or equal to $this->maxLen", Exception::STR_TOO_LONG);
+            throw new StringTooLongException("Length has to be less than or equal to $this->maxLen");
     }
 }

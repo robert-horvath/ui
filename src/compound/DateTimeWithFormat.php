@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\Exception;
+use RHo\UIException\ValidationFailedException;
 
 class DateTimeWithFormat extends DateTime
 {
@@ -19,6 +19,6 @@ class DateTimeWithFormat extends DateTime
     protected function checkStrSyntax(): void
     {
         if (false === ($this->value = \DateTime::createFromFormat($this->format, $this->value)))
-            throw new Exception('Invalid free formatted date and time string', Exception::VALIDATION_FAILED);
+            throw new ValidationFailedException('Invalid free formatted date and time string');
     }
 }

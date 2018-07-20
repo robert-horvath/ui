@@ -34,11 +34,11 @@ invalid: # INVALID DATA
   in: '-9223372036854775809'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: true
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
-    txt: <string|int> data type required
+    txt: <int|string> data type required
   in: []
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_NOT_ALLOWED
@@ -57,6 +57,6 @@ invalid: # INVALID DATA
     txt: Integer number too large
   in: '10000'
 - err:
-    code: RHo\UIException\Exception::REGEXP_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: Regular expression error
   in: '2045'

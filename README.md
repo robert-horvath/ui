@@ -55,8 +55,8 @@ try {
 ```
 #### 2.1. The above example outputs
 ```
-string(31) "<string|int> data type required"
-int(8)
+string(31) "<int|string> data type required"
+int(101)
 ```
 ### 3. Example usage with custom data type
 ```php
