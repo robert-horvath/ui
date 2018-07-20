@@ -38,17 +38,17 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 5$/
+    txt: /^String length too short\. Min=5$/
   in: '1234'
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 5$/
+    txt: /^String length too short\. Min=5$/
   in: ''
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 5$/
+    txt: /^String length too long\. Max=5$/
   in: '123456'
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: 'xabcd'

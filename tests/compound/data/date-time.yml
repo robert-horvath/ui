@@ -28,11 +28,11 @@ invalid: # INVALID DATA
   in: 00:00:61
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 4$/
+    txt: /^String length too short\. Min=4$/
   in: '123'
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 64$/
+    txt: /^String length too long\. Max=64$/
   in: '12345678901234567890123456789012345678901234567890123456789012345'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE

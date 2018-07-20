@@ -7,10 +7,11 @@ class RegexpExecutionErrorException extends Exception
 
     protected $code = parent::REGEXP_EXECUTION_ERROR;
 
-    protected $message = 'Regular expression error';
+    protected $message = 'Regular expression error. Err=%d';
 
-    public function pregLastError(): int
+    public function __construct(int $pregLastError)
     {
-        return preg_last_error();
+        $this->message = sprintf($this->message, $pregLastError);
+        parent::__construct();
     }
 }

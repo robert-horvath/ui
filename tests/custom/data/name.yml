@@ -34,11 +34,11 @@ invalid: # INVALID DATA
   in: Rób+ert
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 2$/
+    txt: /^String length too short\. Min=2$/
   in: L
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 30$/
+    txt: /^String length too long\. Max=30$/
   in: This is a very long name.......
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -54,5 +54,5 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: Hector Sausage-Hausen

@@ -34,9 +34,9 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 5$/
+    txt: /^String length too short\. Min=5$/
   in: a@bc
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 254$/
+    txt: /^String length too long\. Max=254$/
   in: cxa084vt392AFvw4KKG9Y41avTZGnsCxyxtiPD8jXVT72nVj6ZXIcoCGEylJLOmI6AIZbyhqLnbgIFsCYhAU50gI41QIb0L1crZe1Z5StjuL2alNVWa9YwaPM1cFJjM1IGhYjhAlYvylI7RY59jUmbDBYXDGN0RqGdipdO07SPeHAPcpYhjLcnYGYt4IYJ5ovIlbA2bDwaHldi7fKgYUXbGF5EVq3l6eMLSI9dbIaaX8g9iFgrebiuaG40mAh0w

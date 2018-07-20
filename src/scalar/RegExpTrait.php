@@ -24,6 +24,6 @@ trait RegExpTrait
         if (0 === $ret)
             throw new ValidationFailedException('Pattern does not match given subject');
         else
-            throw new RegexpExecutionErrorException();
+            throw new RegexpExecutionErrorException(preg_last_error());
     }
 }

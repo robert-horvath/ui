@@ -43,8 +43,8 @@ abstract class AbstractString extends AbstractFixedSizeString
     {
         $len = mb_strlen($this->value);
         if ($len < $this->minLen)
-            throw new StringTooShortException("Length has to be greater than or equal to $this->minLen");
+            throw new StringTooShortException($this->minLen);
         if ($len > $this->maxLen)
-            throw new StringTooLongException("Length has to be less than or equal to $this->maxLen");
+            throw new StringTooLongException($this->maxLen);
     }
 }

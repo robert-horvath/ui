@@ -43,22 +43,22 @@ invalid: # INVALID DATA
   maxLength: 9
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 8$/
+    txt: /^String length too short\. Min=8$/
   in: 'Bearer '
   maxLength: 1000
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 8$/
+    txt: /^String length too short\. Min=8$/
   in: Bearer=
   maxLength: 3000
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 100$/
+    txt: /^String length too long\. Max=100$/
   in: A398djMmK84y4bQ5y0BLoYJUnBPtA5GQXcPC442KVOVdIZH9gZ4ultfIIOdLjhJ9DId5Rj2NgtceUdi9ib2og1ZTTL8CZ0GVPF7KA
   maxLength: 100
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 8$/
+    txt: /^String length too long\. Max=8$/
   in: k6Fv12_/y
   maxLength: 8
 - err:
@@ -78,6 +78,6 @@ invalid: # INVALID DATA
   maxLength: 0
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: Bearer abc=
   maxLength: 15

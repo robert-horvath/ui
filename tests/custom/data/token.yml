@@ -18,12 +18,12 @@ invalid: # INVALID DATA
   size: 60
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 19$/
+    txt: /^String length too long\. Max=19$/
   in: SDYMLTo449UTdG2DGFtN
   size: 19
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 5$/
+    txt: /^String length too short\. Min=5$/
   in: jH65
   size: 5
 - err:
@@ -45,6 +45,6 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: abcd
   size: 4

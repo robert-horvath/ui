@@ -50,7 +50,7 @@ invalid: # INVALID DATA
   pattern: /^[0-9]{10}$/
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=2$/ #PREG_BACKTRACK_LIMIT_ERROR
   in: foobar foobar foobar
   min: 1
   max: 100
@@ -85,14 +85,14 @@ invalid: # INVALID DATA
   pattern: ''
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 2$/
+    txt: /^String length too short\. Min=2$/
   in: a
   min: 2
   max: 5
   pattern: /^a{2,5}$/
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 5$/
+    txt: /^String length too long\. Max=5$/
   in: aaaaaa
   min: 2
   max: 5  

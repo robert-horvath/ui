@@ -57,14 +57,14 @@ abstract class AbstractInteger extends AbstractUI
         $this->checkStrRegExpSyntax();
         $i = intval($this->value); // returns either PHP_INT_MIN or PHP_INT_MAX when overflows
         if (strval($i) !== $this->value && ($i === PHP_INT_MIN || $i === PHP_INT_MAX))
-            throw new IntNumberOutOfRangeException();
+            throw new IntNumberOutOfRangeException(PHP_INT_MIN, PHP_INT_MAX);
         $this->value = $i;
     }
 
     private function checkIntRange(): void
     {
         if ($this->value > $this->max)
-            throw new IntNumberTooLargeException();
+            throw new IntNumberTooLargeException($this->max);
         if ($this->value < $this->min)
             throw new IntNumberTooSmallException($this->min);
     }

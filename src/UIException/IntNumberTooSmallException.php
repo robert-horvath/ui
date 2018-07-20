@@ -7,7 +7,7 @@ class IntNumberTooSmallException extends Exception
 
     protected $code = parent::INT_NUMBER_TOO_SMALL;
 
-    protected $message = 'Integer number too small';
+    protected $message = 'Integer number too small. Min=%d';
 
     public function __construct(int $min)
     {

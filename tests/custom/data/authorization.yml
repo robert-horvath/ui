@@ -41,15 +41,15 @@ invalid: # INVALID DATA
   in: '12345678'
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 8$/
+    txt: /^String length too short\. Min=8$/
   in: 'Bearer '
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 8$/
+    txt: /^String length too short\. Min=8$/
   in: Bearer=
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 150$/
+    txt: /^String length too long\. Max=150$/
   in: Bearer mK84y4bQ5y0BLoYJUnBPtA5GQXcPC442KVOVdIZH9gZ4ultfIIOdLxhJ9DId5Rj2~Mon.05-Sep-2010_12/34/56.987654_CEST===========================================
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -65,5 +65,5 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: Bearer =

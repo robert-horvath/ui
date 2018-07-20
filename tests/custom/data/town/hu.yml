@@ -30,7 +30,7 @@ invalid: # INVALID DATA
   in: '-875-'
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
-    txt: /^Integer number out of range$/
+    txt: /^Integer number out of range. Min=-9223372036854775808, Max=9223372036854775807$/
   in: '-9223372036854775809'
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -50,17 +50,17 @@ invalid: # INVALID DATA
   in: '0000'
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
-    txt: /^Integer number too small$/
+    txt: /^Integer number too small\. Min=0$/
   in: '-000001'
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
-    txt: /^Integer number too small$/
+    txt: /^Integer number too small\. Min=0$/
   in: -10
 - err:
     code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
-    txt: /^Integer number too large$/
+    txt: /^Integer number too large\. Max=3572$/
   in: '3573'
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: '1258'

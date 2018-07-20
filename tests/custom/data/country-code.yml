@@ -30,23 +30,23 @@ invalid: # INVALID DATA
   in: <>
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 2$/
+    txt: /^String length too short\. Min=2$/
   in: X
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 2$/
+    txt: /^String length too short\. Min=2$/
   in: "?"
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 2$/
+    txt: /^String length too short\. Min=2$/
   in: "\""  
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 2$/
+    txt: /^String length too long\. Max=2$/
   in: HUN
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 2$/
+    txt: /^String length too long\. Max=2$/
   in: \\\
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -62,5 +62,5 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: CC

@@ -42,17 +42,17 @@ invalid: # INVALID DATA
   in: 3612345678
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 13$/
+    txt: /^String length too short\. Min=13$/
   in: '+36-20-34567'
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 13$/
+    txt: /^String length too short\. Min=13$/
   in: ''
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 17$/
+    txt: /^String length too long\. Max=17$/
   in: '+36-71-34567890123'
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: '+36-60-789-1234'

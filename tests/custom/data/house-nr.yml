@@ -40,15 +40,15 @@ invalid: # INVALID DATA
   in: =
 - err:
     code: RHo\UIException\Exception::STR_TOO_SHORT
-    txt: /^Length has to be greater than or equal to 1$/
+    txt: /^String length too short\. Min=1$/
   in: ""
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 10$/
+    txt: /^String length too long\. Max=10$/
   in: 1234567890v
 - err:
     code: RHo\UIException\Exception::STR_TOO_LONG
-    txt: /^Length has to be less than or equal to 10$/
+    txt: /^String length too long\. Max=10$/
   in: 3891/acf/n?
 - err:
     code: RHo\UIException\Exception::INVALID_DATA_TYPE
@@ -64,5 +64,5 @@ invalid: # INVALID DATA
   in: []
 - err:
     code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
-    txt: /^Regular expression error$/
+    txt: /^Regular expression error\. Err=0$/
   in: 8/b.
