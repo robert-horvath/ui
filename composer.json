@@ -9,7 +9,6 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"RHo\\": "src/",
 			"RHo\\UI\\" : [
 				"src/",
 				"src/scalar/",
