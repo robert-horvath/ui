@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\ValidationFailedException;
+use RHoException\UI\ValidationFailedException;
 
 class DateTimeWithFormat extends DateTime
 {

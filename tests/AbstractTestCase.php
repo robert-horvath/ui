@@ -4,7 +4,7 @@ namespace RHoTest\UI;
 
 require_once 'mock-preg-match.php';
 
-use RHo\UIException\Exception;
+use RHoException\UI\Exception;
 use PHPUnit\Framework\TestCase;
 use ArrayObject;
 

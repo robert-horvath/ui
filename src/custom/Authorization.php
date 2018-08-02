@@ -26,7 +26,7 @@ class Authorization extends AbstractStringWithRegExp
      *
      * @param string $value
      *            Not validated authorization
-     * @throws \RHo\UIException\Exception Validation failed
+     * @throws \RHoException\UI\Exception Validation failed
      * @return Authorization Validated authorization
      */
     final protected function checkStrSyntax(): void

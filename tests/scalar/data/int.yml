@@ -27,73 +27,73 @@ valid: # VALID DATA
   max: NULL
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_LARGE
     txt: /^Integer number too large\. Max=0$/
   in: 1
   min: NULL
   max: NULL
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_SMALL
     txt: /^Integer number too small\. Min=-9$/
   in: -10
   min: -9
   max: 0
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_LARGE
     txt: /^Integer number too large\. Max=4$/
   in: '5'
   min: -5
   max: 4
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
+    code: RHoException\UI\Exception::INT_NUMBER_OUT_OF_RANGE
     txt: /^Integer number out of range. Min=-9223372036854775808, Max=9223372036854775807$/
   in: '9223372036854775808'
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '+99'
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: ''
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: integer
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: true
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: false
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: []
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: -0.5
   min: 0
   max: 0
 - err:
-    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
+    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: '0'
   min: 0

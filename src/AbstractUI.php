@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHo\UIException\MandatoryValueMissingException;
+use RHoException\UI\MandatoryValueMissingException;
 
 abstract class AbstractUI implements UIInterface
 {
@@ -40,7 +40,7 @@ abstract class AbstractUI implements UIInterface
      * @param mixed ...$args
      *            Variable-length parameter list to filter the user input.
      *            The first parameter is always the not filtered user input.
-     * @throws \RHo\UIException\Exception Filering user input failed
+     * @throws \RHoException\UI\Exception Filering user input failed
      * @return mixed Filtered user input
      */
     final public static function mandatory(...$args)
@@ -56,7 +56,7 @@ abstract class AbstractUI implements UIInterface
      * @param mixed ...$args
      *            Variable-length parameter list to filter the user input.
      *            The first parameter is always the not filtered user input.
-     * @throws \RHo\UIException\Exception Filering user input failed
+     * @throws \RHoException\UI\Exception Filering user input failed
      * @return mixed|NULL Filtered user input or NULL if user input missing
      */
     final public static function optional(...$args)

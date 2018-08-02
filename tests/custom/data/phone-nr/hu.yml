@@ -21,38 +21,38 @@ valid: # VALID DATA
   in: '+36-71-3456789012'
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '+36-1-234-5678'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '06-30-456-789'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '+36-1-234-5678'
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: 3612345678
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=13$/
   in: '+36-20-34567'
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=13$/
   in: ''
 - err:
-    code: RHo\UIException\Exception::STR_TOO_LONG
+    code: RHoException\UI\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=17$/
   in: '+36-71-34567890123'
 - err:
-    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
+    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: '+36-60-789-1234'

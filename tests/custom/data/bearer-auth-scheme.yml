@@ -12,72 +12,72 @@ valid: # VALID DATA
   maxLength: 9  
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: Bearer =
   maxLength: 10  
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: Bearer ABC0xyz12-._~+/=1
   maxLength: 25
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: ABC0xyz12-._~+/=
   maxLength: 30
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: BeareR A=
   maxLength: 10
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: 1abcd  =
   maxLength: 10
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '12345678'
   maxLength: 9
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=8$/
   in: 'Bearer '
   maxLength: 1000
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=8$/
   in: Bearer=
   maxLength: 3000
 - err:
-    code: RHo\UIException\Exception::STR_TOO_LONG
+    code: RHoException\UI\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=100$/
   in: A398djMmK84y4bQ5y0BLoYJUnBPtA5GQXcPC442KVOVdIZH9gZ4ultfIIOdLjhJ9DId5Rj2NgtceUdi9ib2og1ZTTL8CZ0GVPF7KA
   maxLength: 100
 - err:
-    code: RHo\UIException\Exception::STR_TOO_LONG
+    code: RHoException\UI\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=8$/
   in: k6Fv12_/y
   maxLength: 8
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: false
   maxLength: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
   maxLength: 0
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: []
   maxLength: 0
 - err:
-    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
+    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: Bearer abc=
   maxLength: 15

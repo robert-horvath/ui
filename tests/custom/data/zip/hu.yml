@@ -9,54 +9,54 @@ valid: # VALID DATA
   in: '1222'
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '0x00'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: 'AAAA'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '123X'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: 'o123'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '875-'
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
+    code: RHoException\UI\Exception::INT_NUMBER_OUT_OF_RANGE
     txt: /^Integer number out of range. Min=-9223372036854775808, Max=9223372036854775807$/
   in: '-9223372036854775809'
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: true
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: []
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_NOT_ALLOWED
+    code: RHoException\UI\Exception::INT_NUMBER_NOT_ALLOWED
     txt: /^Integer number not allowed$/
   in: '1000'
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_SMALL
     txt: /^Integer number too small\. Min=1000$/
   in: '-000002'
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_SMALL
     txt: /^Integer number too small\. Min=1000$/
   in: -1
 - err:
-    code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
+    code: RHoException\UI\Exception::INT_NUMBER_TOO_LARGE
     txt: /^Integer number too large\. Max=9999$/
   in: '10000'
 - err:
-    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
+    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: '2045'

@@ -12,22 +12,22 @@ valid: # VALID DATA
   in: Vas
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: 3612345678
 - err:
-    code: RHo\UIException\Exception::ARRAY_ITEM_NOT_FOUND
+    code: RHoException\UI\Exception::ARRAY_ITEM_NOT_FOUND
     txt: /^Array item not found$/
   in: Vás
 - err:
-    code: RHo\UIException\Exception::ARRAY_ITEM_NOT_FOUND
+    code: RHoException\UI\Exception::ARRAY_ITEM_NOT_FOUND
     txt: /^Array item not found$/
   in: Komárom Esztergom
 - err:
-    code: RHo\UIException\Exception::ARRAY_ITEM_NOT_FOUND
+    code: RHoException\UI\Exception::ARRAY_ITEM_NOT_FOUND
     txt: /^Array item not found$/
   in: Veszprem

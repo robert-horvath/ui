@@ -14,31 +14,31 @@ valid: # VALID DATA
   - y
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
   array:
   - 'true'
   - 'false'
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: false
   array: []
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: 100
   array: []
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in:
   - a
   - b
   array: NULL
 - err:
-    code: RHo\UIException\Exception::ARRAY_ITEM_NOT_FOUND
+    code: RHoException\UI\Exception::ARRAY_ITEM_NOT_FOUND
     txt: /^Array item not found$/
   in: a
   array: NULL

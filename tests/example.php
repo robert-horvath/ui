@@ -5,7 +5,7 @@ try {
     $s = $argv[1] ?? '';
     eval("\$x = RHo\\UI\\$s;");
     var_dump($x);
-} catch (\RHo\UIException\Exception $e) {
+} catch (\RHoException\UI\Exception $e) {
     echo "ERROR\n";
     var_dump($e->getCode(), $e->getMessage());
 }

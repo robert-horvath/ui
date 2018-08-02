@@ -9,46 +9,46 @@ valid: # VALID DATA
   in: '89012'
 invalid: # INVALID DATA
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '00000'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: 'AAAAY'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '123XB'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '01234'
 - err:
-    code: RHo\UIException\Exception::VALIDATION_FAILED
+    code: RHoException\UI\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '-875-'
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: 40625
 - err:
-    code: RHo\UIException\Exception::INVALID_DATA_TYPE
+    code: RHoException\UI\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: []
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=5$/
   in: '1234'
 - err:
-    code: RHo\UIException\Exception::STR_TOO_SHORT
+    code: RHoException\UI\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=5$/
   in: ''
 - err:
-    code: RHo\UIException\Exception::STR_TOO_LONG
+    code: RHoException\UI\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=5$/
   in: '123456'
 - err:
-    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
+    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: 'xabcd'
