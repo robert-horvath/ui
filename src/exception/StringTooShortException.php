@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace RHoException\UI;
+namespace RHo\UIException;
 
 class StringTooShortException extends Exception
 {

@@ -15,22 +15,22 @@ valid: # VALID DATA
   in: n
 invalid: # INVALID DATA
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid boolean expression$/
   in: 'true'
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid boolean expression$/
   in: 'false'
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid boolean expression$/
   in: 'yes'
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<char[t,f,y,n]|bool> data type required$/
   in: 1
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<char[t,f,y,n]|bool> data type required$/
   in: []

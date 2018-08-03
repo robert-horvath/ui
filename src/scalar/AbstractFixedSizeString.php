@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHoException\UI\InvalidDataTypeException;
+use RHo\UIException\InvalidDataTypeException;
 
 /**
  *

@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI\Zip;
 
-use RHoException\UI\IntNumberNotAllowedException;
+use RHo\UIException\IntNumberNotAllowedException;
 use RHo\UI\ {
     AbstractInteger,
     StrValueTrait

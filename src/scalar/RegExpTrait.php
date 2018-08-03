@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHoException\UI\ {
+use RHo\UIException\ {
     ValidationFailedException,
     RegexpExecutionErrorException
 };

@@ -9,7 +9,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"RHoException\\UI\\" : "src/exception/",
+			"RHo\\UIException\\" : "src/exception/",
 			"RHo\\UI\\" : [
 				"src/",
 				"src/scalar/",
@@ -20,7 +20,7 @@
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"RHoTest\\UI\\" : [
+			"RHo\\UITest\\" : [
 				"tests/",
 				"tests/scalar/",
 				"tests/compound/",

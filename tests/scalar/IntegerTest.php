@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace RHoTest\UI;
+namespace RHo\UITest;
 
 final class IntegerTest extends AbstractScalarTestCase
 {

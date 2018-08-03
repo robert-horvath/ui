@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI\Town;
 
-use RHoTest\UI\AbstractCustomTestCase;
+use RHo\UITest\AbstractCustomTestCase;
 
 final class HuTest extends AbstractCustomTestCase
 {

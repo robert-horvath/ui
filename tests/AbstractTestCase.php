@@ -1,10 +1,10 @@
 <?php
 declare(strict_types = 1);
-namespace RHoTest\UI;
+namespace RHo\UITest;
 
 require_once 'mock-preg-match.php';
 
-use RHoException\UI\Exception;
+use RHo\UIException\Exception;
 use PHPUnit\Framework\TestCase;
 use ArrayObject;
 
@@ -48,6 +48,7 @@ abstract class AbstractTestCase extends TestCase
     }
 
     /**
+     *
      * @dataProvider validDataProvider
      */
     public function testValidUI($out, ...$args): void
@@ -65,7 +66,7 @@ abstract class AbstractTestCase extends TestCase
     public function testNullUI(): void
     {
         $this->assertNull($this->className::optional(NULL));
-        
+
         $this->expectException(Exception::class);
         $this->expectExceptionMessageRegExp('/^Mandatory value missing$/');
         $this->expectExceptionCode(Exception::MANDATORY_VALUE_MISSING);
@@ -73,6 +74,7 @@ abstract class AbstractTestCase extends TestCase
     }
 
     /**
+     *
      * @dataProvider invalidDataProvider
      */
     public function testMandatoryInvalidUI(array $err, ...$args): void
@@ -82,6 +84,7 @@ abstract class AbstractTestCase extends TestCase
     }
 
     /**
+     *
      * @dataProvider invalidDataProvider
      */
     public function testOptionalInvalidUI(array $err, ...$args): void
@@ -93,10 +96,15 @@ abstract class AbstractTestCase extends TestCase
     private function prepareInvalidUITest(array $err, ...$args): void
     {
         global $mockPregMatch;
-        
+
         $errCode = constant($err['code']);
         $mockPregMatch = ($errCode === Exception::REGEXP_EXECUTION_ERROR && $this->mockPregMatch);
         
+        // Get rid of "Variable '$mockPregMatch' is never used" PHP eclipse warning
+        if ($mockPregMatch)
+            $mockPregMatch = $mockPregMatch;
+        
+            
         $this->expectException(Exception::class);
         $this->expectExceptionMessageRegExp($err['txt']);
         $this->expectExceptionCode($errCode);

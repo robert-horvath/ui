@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-use RHoException\UI\ArrayItemNotFoundException;
+use RHo\UIException\ArrayItemNotFoundException;
 
 class StrFixed extends AbstractFixedSizeString
 {

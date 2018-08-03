@@ -15,47 +15,47 @@ valid: # VALID DATA
   format: D.Y/m/d-H/i/s.u_T
 invalid: # INVALID DATA
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid free formatted date and time string$/
   in: 2013-02-15 19:43:27.056128 CET
   format: D.Y-m-d H/i/s.u_T
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid free formatted date and time string$/
   in: 1999-01-01
   format: Y-m_d
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Invalid free formatted date and time string$/
   in: 00:00:00
   format: H/i/s
 - err:
-    code: RHoException\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=4$/
   in: '2:0'
   format: H:i
 - err:
-    code: RHoException\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=64$/
   in: '12345678901234567890123456789012345678901234567890123456789012345'
   format: H/i/s
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: -100
   format: ''
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
   format: ''
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: false
   format: ''
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: []
   format: ''

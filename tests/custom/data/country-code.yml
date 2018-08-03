@@ -9,58 +9,58 @@ valid: # VALID DATA
   in: HU
 invalid: # INVALID DATA
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: G1
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: "~~"
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: X1
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: H%
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: <>
 - err:
-    code: RHoException\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=2$/
   in: X
 - err:
-    code: RHoException\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=2$/
   in: "?"
 - err:
-    code: RHoException\UI\Exception::STR_TOO_SHORT
+    code: RHo\UIException\Exception::STR_TOO_SHORT
     txt: /^String length too short\. Min=2$/
   in: "\""  
 - err:
-    code: RHoException\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=2$/
   in: HUN
 - err:
-    code: RHoException\UI\Exception::STR_TOO_LONG
+    code: RHo\UIException\Exception::STR_TOO_LONG
     txt: /^String length too long\. Max=2$/
   in: \\\
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: false
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: true
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<string> data type required$/
   in: []
 - err:
-    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: CC

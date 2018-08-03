@@ -13,46 +13,46 @@ valid: # VALID DATA
   in: '-000000001'
 invalid: # INVALID DATA
 - err:
-    code: RHoException\UI\Exception::INT_NUMBER_TOO_SMALL
+    code: RHo\UIException\Exception::INT_NUMBER_TOO_SMALL
     txt: /^Integer number too small\. Min=-32768$/
   in: -32769
 - err:
-    code: RHoException\UI\Exception::INT_NUMBER_TOO_LARGE
+    code: RHo\UIException\Exception::INT_NUMBER_TOO_LARGE
     txt: /^Integer number too large\. Max=32767$/
   in: '32768'
 - err:
-    code: RHoException\UI\Exception::INT_NUMBER_OUT_OF_RANGE
+    code: RHo\UIException\Exception::INT_NUMBER_OUT_OF_RANGE
     txt: /^Integer number out of range. Min=-9223372036854775808, Max=9223372036854775807$/
   in: '9223372036854775808'
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: '+1'
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: ''
 - err:
-    code: RHoException\UI\Exception::VALIDATION_FAILED
+    code: RHo\UIException\Exception::VALIDATION_FAILED
     txt: /^Pattern does not match given subject$/
   in: int
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: true
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: false
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: []
 - err:
-    code: RHoException\UI\Exception::INVALID_DATA_TYPE
+    code: RHo\UIException\Exception::INVALID_DATA_TYPE
     txt: /^<int|string> data type required$/
   in: -0.5
 - err:
-    code: RHoException\UI\Exception::REGEXP_EXECUTION_ERROR
+    code: RHo\UIException\Exception::REGEXP_EXECUTION_ERROR
     txt: /^Regular expression error\. Err=0$/
   in: '800'
