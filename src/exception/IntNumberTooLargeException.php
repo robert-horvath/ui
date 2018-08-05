@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 namespace RHo\UIException;
 
 class IntNumberTooLargeException extends Exception

@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 namespace RHo\UI;
 
 final class Int8 extends Integer
