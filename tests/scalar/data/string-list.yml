@@ -1,4 +1,4 @@
-class: RHo\UI\StrFixed
+class: RHo\UI\StrList
 valid: # VALID DATA
 - out: abc
   in: abc

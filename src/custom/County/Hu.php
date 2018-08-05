@@ -2,9 +2,9 @@
 declare(strict_types = 1);
 namespace RHo\UI\County;
 
-use RHo\UI\StrFixed;
+use RHo\UI\StrList;
 
-class Hu extends StrFixed
+class Hu extends StrList
 {
 
     protected const STR_ARRAY_ITEMS = [

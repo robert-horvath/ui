@@ -4,7 +4,7 @@ namespace RHo\UI;
 
 use RHo\UIException\ArrayItemNotFoundException;
 
-class StrFixed extends AbstractFixedSizeString
+class StrList extends AbstractFixedSizeString
 {
     use StrValueTrait;
 
