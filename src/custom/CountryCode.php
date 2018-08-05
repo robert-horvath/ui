@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class CountryCode extends StrAny
+class CountryCode extends Str
 {
 
     protected const MIN_LENGTH = 2;

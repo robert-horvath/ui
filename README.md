@@ -17,7 +17,7 @@ namespace RHo\UI;
 
 try {
     $bool = Boolean::optional('t');
-    $str = StrAny::mandatory('example', 1, 10, '/[a-z]+/');
+    $str = Str::mandatory('example', 1, 10, '/[a-z]+/');
     $byte = UInt8::mandatory(255);
     $word = UInt16::optional(NULL);
     $dt = DateTime::mandatory('2000-01-01 12:30:50');

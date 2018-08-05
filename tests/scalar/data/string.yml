@@ -1,4 +1,4 @@
-class: RHo\UI\StrAny
+class: RHo\UI\Str
 mockPregMatch: FALSE
 valid: # VALID DATA
 - out: MandatorY

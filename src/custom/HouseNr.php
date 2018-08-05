@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class HouseNr extends StrAny
+class HouseNr extends Str
 {
 
     protected const MIN_LENGTH = 1;

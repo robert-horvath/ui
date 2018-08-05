@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class Name extends StrAny
+class Name extends Str
 {
 
     protected const MIN_LENGTH = 2;

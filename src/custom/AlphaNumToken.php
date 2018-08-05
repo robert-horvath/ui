@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class AlphaNumToken extends StrAny
+class AlphaNumToken extends Str
 {
 
     private const LENGTH = 64;

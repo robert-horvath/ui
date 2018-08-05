@@ -2,9 +2,9 @@
 declare(strict_types = 1);
 namespace RHo\UI\Zip;
 
-use RHo\UI\StrAny;
+use RHo\UI\Str;
 
-class De extends StrAny
+class De extends Str
 {
 
     protected const MIN_LENGTH = 5;

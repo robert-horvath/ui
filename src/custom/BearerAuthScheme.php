@@ -8,7 +8,7 @@ namespace RHo\UI;
  * b64token = 1*( ALPHA / DIGIT / "-" / "." / "_" / "~" / "+" / "/" ) *"="
  * credentials = "Bearer" 1*SP b64token
  */
-class BearerAuthScheme extends StrAny
+class BearerAuthScheme extends Str
 {
 
     protected const MIN_LENGTH = 8;

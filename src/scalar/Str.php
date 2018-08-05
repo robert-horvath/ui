@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class StrAny extends AbstractStringWithRegExp
+class Str extends AbstractStringWithRegExp
 {
     use StrValueTrait;
 }

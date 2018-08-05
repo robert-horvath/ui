@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 namespace RHo\UI;
 
-class Password extends StrAny
+class Password extends Str
 {
 
     protected const MIN_LENGTH = 5;
